@@ -9,6 +9,12 @@ type nav = {
   content: string | React.ReactNode;
 };
 
+type NavProps = {
+  routerPath: string;
+  className?: string;
+  navClick?: Function;
+};
+
 const navs: nav[] = [
   {
     path: "/",
@@ -40,24 +46,68 @@ export default function Top() {
   const router = useRouter();
   const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false);
 
+  const Nav = ({ routerPath, className }: NavProps) => (
+    <nav className={className !== undefined ? className : ""}>
+      {navs.map(({ path, content }, indx) => {
+        const onCurrentPath: boolean = path === routerPath;
+
+        return (
+          <Link
+            href={path}
+            key={indx}
+            className={`${
+              onCurrentPath ? "" : "font-semibold"
+            } capitalize hover:text-attention`}
+            onClick={(e) => {
+              //prevening default
+              e.preventDefault();
+
+              //closing the mobile nav
+              setMobileNavOpen(false);
+
+              //changing the route
+              router.push(path);
+            }}
+          >
+            {content}
+          </Link>
+        );
+      })}
+    </nav>
+  );
+
   return (
     <>
-      <header className="top-0 sticky z-0 mx-auto flex w-full max-w-[1184px] items-center justify-between px-16 py-24">
-        <Image
-          src="/logo_mini_black.svg"
-          className="nav-brk:hidden"
-          alt="logo"
-          width={32}
-          height={32}
-        />
+      {mobileNavOpen ? (
+        <div
+          id="mobile-nav"
+          className="top-0 left-0 fixed z-10 flex h-screen w-screen justify-end bg-black-faded"
+        >
+          <div className="flex h-screen  items-start p-16">
+            <Nav
+              className="flex h-full flex-col items-end gap-32 rounded-tl-lg rounded-br-lg rounded-bl-lg bg-white p-16"
+              routerPath={router.pathname}
+            />
+            <div
+              id="close"
+              className="justifycenter flex h-32 w-32 items-center rounded-tr-lg rounded-br-lg bg-white"
+              onClick={() => setMobileNavOpen(false)}
+            >
+              <Image src="/cancel.svg" alt="close" width={12.2} height={12.2} />
+            </div>
+          </div>
+        </div>
+      ) : (
+        <></>
+      )}
+      <header className="top-0 sticky z-0 mx-auto flex w-full max-w-[1184px] items-center justify-between px-16 py-16 nav-brk:py-24">
+        <Link href="/" className="nav-brk:hidden">
+          <Image src="/logo_mini_black.svg" alt="logo" width={32} height={32} />
+        </Link>
 
-        <Image
-          src="/logo.svg"
-          className="hidden nav-brk:block"
-          alt="logo"
-          width={255}
-          height={64}
-        />
+        <Link href="/" className="hidden nav-brk:block">
+          <Image src="/logo.svg" alt="logo" width={255} height={64} />
+        </Link>
 
         <Image
           src="/hamburger.svg"
@@ -68,31 +118,11 @@ export default function Top() {
           onClick={() => setMobileNavOpen(true)}
         />
 
-        <nav className="hidden items-center gap-42 nav-brk:flex">
-          {navs.map(({ path, content }, indx) => {
-            const onCurrentPath: boolean = path === router.pathname;
-
-            return (
-              <Link
-                href={path}
-                key={indx}
-                className={`${onCurrentPath ? "" : "font-semibold"} capitalize`}
-              >
-                {content}
-              </Link>
-            );
-          })}
-        </nav>
+        <Nav
+          className="hidden items-center gap-42 nav-brk:flex"
+          routerPath={router.pathname}
+        />
       </header>
-
-      {mobileNavOpen ? (
-        <div
-          id="mobile-nav"
-          className="fixed z-10 h-screen w-screen bg-black-faded"
-        ></div>
-      ) : (
-        <></>
-      )}
     </>
   );
 }
