@@ -4,6 +4,8 @@ import Image from "next/image";
 import { H1, H2, H3, H4, Body, Small } from "../components/typography";
 import Button from "../components/button";
 
+import DiscountSection from "@/components/discount";
+
 export default function Home() {
   return (
     <>
@@ -14,6 +16,7 @@ export default function Home() {
         <link rel="icon" href="/logo_mini.svg" />
       </Head>
       <>
+        {/* Hero Section */}
         <section
           id="landing"
           className="flex flex-col items-center py-64
@@ -47,6 +50,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <DiscountSection />
       </>
     </>
   );

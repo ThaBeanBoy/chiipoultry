@@ -3,6 +3,8 @@
     <> Disable scroll when mobile navigation is open
     <> The Shop button looks funny, the alignment is a little off
 
+<> Display discount if current date is earlier than the 
+
 <> Index
     <> Hero section
         <> Fix poisitioning of the hero when in desktop module
