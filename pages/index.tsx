@@ -1,7 +1,8 @@
 import Head from "next/head";
-import { Inter } from "@next/font/google";
+import Image from "next/image";
 
-const inter = Inter({ subsets: ["latin"] });
+import { H1, H2, H3, H4, Body, Small } from "../components/typography";
+import Button from "../components/button";
 
 export default function Home() {
   return (
@@ -13,7 +14,39 @@ export default function Home() {
         <link rel="icon" href="/logo_mini.svg" />
       </Head>
       <>
-        <section id="landing">Landing</section>
+        <section
+          id="landing"
+          className="flex flex-col items-center py-64
+          desktop:flex-row-reverse desktop:gap-16"
+        >
+          <Image
+            src="/hero.png"
+            alt="chicken display"
+            width={895}
+            height={596}
+            className="mb-32 w-full max-w-[584px] min-[420px]:rounded"
+          />
+          <div
+            id="message"
+            className="flex w-full flex-col items-center px-8 desktop:w-auto desktop:items-start"
+          >
+            <H1 className="mb-16 max-w-[584px] text-center desktop:text-left">
+              Making poultry easier.
+            </H1>
+            <H4 className="mb-42 text-center desktop:text-left">
+              & accessible to everyone
+            </H4>
+            <div
+              id="button-container"
+              className="flex w-full max-w-[518px] flex-col gap-16 min-[518px]:flex-row"
+            >
+              <Button className="w-full">Contact Us</Button>
+              <Button className="w-full" outlined>
+                View Drinkers
+              </Button>
+            </div>
+          </div>
+        </section>
       </>
     </>
   );

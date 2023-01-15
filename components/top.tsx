@@ -4,6 +4,8 @@ import { useRouter } from "next/router";
 
 import { useState } from "react";
 
+import Button from "./button";
+
 type nav = {
   path: string;
   content: string | React.ReactNode;
@@ -35,9 +37,9 @@ const navs: nav[] = [
   {
     path: "/contact-us",
     content: (
-      <span className="flex items-center gap-8 rounded bg-active p-8">
+      <Button className="text-body" small>
         shop <Image src="/cart.svg" alt="cart" height={16} width={16} />
-      </span>
+      </Button>
     ),
   },
 ];
@@ -81,7 +83,7 @@ export default function Top() {
       {mobileNavOpen ? (
         <div
           id="mobile-nav"
-          className="top-0 left-0 fixed z-10 flex h-screen w-screen justify-end bg-black-faded"
+          className="fixed top-0 left-0 z-10 flex h-screen w-screen justify-end bg-black-faded"
         >
           <div className="flex h-screen  items-start p-16">
             <Nav
@@ -100,7 +102,7 @@ export default function Top() {
       ) : (
         <></>
       )}
-      <header className="top-0 sticky z-0 mx-auto flex w-full max-w-[1184px] items-center justify-between px-16 py-16 nav-brk:py-24">
+      <header className="sticky z-0 mx-auto flex w-full max-w-[1184px] items-center justify-between bg-white px-16 py-16 nav-brk:py-24">
         <Link href="/" className="nav-brk:hidden">
           <Image src="/logo_mini_black.svg" alt="logo" width={32} height={32} />
         </Link>

@@ -1,0 +1,8 @@
+<> Header
+    <> Fix position sticky for the header
+    <> Disable scroll when mobile navigation is open
+    <> The Shop button looks funny, the alignment is a little off
+
+<> Index
+    <> Hero section
+        <> Fix poisitioning of the hero when in desktop module
