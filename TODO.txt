@@ -4,6 +4,7 @@
     <> The Shop button looks funny, the alignment is a little off
 
 <> Display discount if current date is earlier than the 
+<> Fix position of discount sticker in discount components
 
 <> Index
     <> Hero section

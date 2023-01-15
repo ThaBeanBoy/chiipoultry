@@ -5,6 +5,7 @@ import { H1, H2, H3, H4, Body, Small } from "../components/typography";
 import Button from "../components/button";
 
 import DiscountSection from "@/components/discount";
+import Specifications from "../components/specifications";
 
 export default function Home() {
   return (
@@ -52,6 +53,15 @@ export default function Home() {
         </section>
 
         <DiscountSection />
+
+        <section id="product-details" className="py-64">
+          <div id="section-container" className="m-auto mx-16 max-w-[1184px]">
+            <H2 className="text-center">Product Details</H2>
+            <div id="content" className="flex justify-between">
+              <Specifications />
+            </div>
+          </div>
+        </section>
       </>
     </>
   );

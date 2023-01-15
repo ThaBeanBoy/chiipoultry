@@ -1,5 +1,6 @@
 import Top from "./top";
 import Footer from "./footer";
+import DiscountSection from "./discount";
 
 import { Montserrat } from "@next/font/google";
 
@@ -18,6 +19,7 @@ export default function Layout({ children }: LayoutProps) {
     >
       <Top />
       <main>{children}</main>
+      <DiscountSection />
       <Footer />
     </div>
   );
