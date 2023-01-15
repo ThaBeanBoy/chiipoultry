@@ -5,7 +5,9 @@ import { H1, H2, H3, H4, Body, Small } from "../components/typography";
 import Button from "../components/button";
 
 import DiscountSection from "@/components/discount";
-import Specifications from "../components/specifications";
+
+import ImageSlider from "../components/product-details/imageSlider";
+import Specifications from "../components/product-details/specifications";
 
 export default function Home() {
   return (
@@ -55,9 +57,19 @@ export default function Home() {
         <DiscountSection />
 
         <section id="product-details" className="py-64">
-          <div id="section-container" className="m-auto mx-16 max-w-[1184px]">
-            <H2 className="text-center">Product Details</H2>
-            <div id="content" className="flex justify-between">
+          <div
+            id="section-container"
+            className="mx-16 max-w-[1184px] desktop:mx-auto"
+          >
+            <H2 className="mb-64 text-center prod-details-brk:text-left">
+              Product Details
+            </H2>
+            <div
+              id="content"
+              className="flex flex-col items-center justify-between 
+              prod-details-brk:flex-row-reverse prod-details-brk:items-start prod-details-brk:justify-between"
+            >
+              <ImageSlider />
               <Specifications />
             </div>
           </div>

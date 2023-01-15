@@ -54,7 +54,7 @@ export default function DiscountSection() {
     <section className="w-full bg-black">
       <div
         id="section-container"
-        className="static flex w-full max-w-[1184px] flex-col items-center px-16 py-64 text-white"
+        className="static flex w-full max-w-[1184px] flex-col items-center px-16 py-64 text-white desktop:mx-auto"
       >
         <Image
           src="/discount_sticker.png"

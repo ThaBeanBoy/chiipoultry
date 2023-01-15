@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import { MdKeyboardArrowDown } from "react-icons/Md";
 
-import { H3, H4, Body } from "./typography";
+import { H3, H4, Body } from "../typography";
 type detail = {
   title: string;
   description?: string;
@@ -71,8 +71,10 @@ function Detail({
       className="mb-16 w-full rounded bg-white p-16 drop-shadow-lg last:mb-0"
     >
       <div id="top" className="mb-8 flex items-center gap-8">
-        <MdKeyboardArrowDown />
-        <H4>{title}</H4>
+        <MdKeyboardArrowDown
+          className={`${open ? "rotate-[180deg] text-attention" : ""}`}
+        />
+        <H4 className={`${open ? "text-attention" : ""}`}>{title}</H4>
       </div>
       {open ? <Body className="pl-24 text-left">{description}</Body> : <></>}
     </button>
@@ -85,7 +87,7 @@ export default function Specifications() {
   );
 
   return (
-    <ul className="mx-auto w-full max-w-[584px]">
+    <ul className="w-full max-w-[584px]">
       {details.map(({ title, description, isHeading }, key) =>
         isHeading ? (
           <H3 key={key} className="my-32 ml-[40px]">

@@ -6,8 +6,10 @@ module.exports = {
   ],
   theme: {
     screens: {
-      "nav-brk": "868px",
       desktop: "1184px",
+
+      "nav-brk": "868px",
+      "prod-details-brk": "1100px",
     },
 
     fontSize: {
