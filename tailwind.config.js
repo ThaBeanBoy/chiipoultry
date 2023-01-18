@@ -5,6 +5,10 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    gridTemplateColumns: {
+      3: "repeat(auto-fit, minmax(329px, 384px))",
+    },
+
     screens: {
       desktop: "1184px",
 
@@ -39,6 +43,7 @@ module.exports = {
 
     spacing: {
       0: "0px",
+      4: "4px",
       8: "8px",
       16: "16px",
       24: "24px",
@@ -48,7 +53,16 @@ module.exports = {
       64: "64px",
     },
 
-    extend: {},
+    extend: {
+      // keyframes: {
+      //   ping: {
+      //     75%, 100% {
+      //       transform: scale(2);
+      //       opacity: 0;
+      //     }
+      //   },
+      // },
+    },
   },
   plugins: [],
 };

@@ -22,9 +22,12 @@ export default function Button({
   return (
     <button
       id={id}
-      className={`${className} rounded border-2 border-solid drop-shadow-lg ${
-        outlined ? "bg-white" : "bg-active"
-      } border-active  p-8 hover:text-black hover:brightness-125`}
+      className={`
+        ${className}
+        ${outlined ? "bg-white" : "bg-active"}
+        rounded border-2 border-solid border-active p-8 drop-shadow-lg transition
+        hover:scale-[1.05]  hover:text-black hover:brightness-125 hover:drop-shadow-2xl
+        active:scale-[0.95] active:brightness-[.95] active:drop-shadow-md`}
       onClick={onClick !== undefined ? () => onClick : () => {}}
     >
       {small ? (

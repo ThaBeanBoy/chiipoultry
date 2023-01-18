@@ -4,6 +4,8 @@ import { useRouter } from "next/router";
 
 import { useState } from "react";
 
+import { IoMdClose } from "react-icons/Io";
+
 import Button from "./button";
 
 type nav = {
@@ -37,8 +39,12 @@ const navs: nav[] = [
   {
     path: "/contact-us",
     content: (
-      <Button className="text-body" small>
+      <Button className="w-full text-body" small>
         shop <Image src="/cart.svg" alt="cart" height={16} width={16} />
+        <span className="absolute top-0 right-0 flex h-8 w-8 translate-y-[-4px] translate-x-[4px]">
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-attention opacity-75"></span>
+          <span className="relative inline-flex h-8 w-8 rounded-full bg-attention"></span>
+        </span>
       </Button>
     ),
   },
@@ -57,9 +63,11 @@ export default function Top() {
           <Link
             href={path}
             key={indx}
-            className={`${
-              onCurrentPath ? "" : "font-semibold"
-            } capitalize hover:text-attention`}
+            className={`
+            ${onCurrentPath ? "" : "font-semibold"} 
+            capitalize hover:text-attention
+            ${indx === navs.length - 1 ? "w-full nav-brk:w-auto" : ""}
+            `}
             onClick={(e) => {
               //prevening default
               e.preventDefault();
@@ -92,10 +100,11 @@ export default function Top() {
             />
             <div
               id="close"
-              className="justifycenter flex h-32 w-32 items-center rounded-tr-lg rounded-br-lg bg-white"
+              className="flex h-32 w-32 items-center justify-center rounded-tr-lg rounded-br-lg bg-white"
               onClick={() => setMobileNavOpen(false)}
             >
-              <Image src="/cancel.svg" alt="close" width={12.2} height={12.2} />
+              <IoMdClose />
+              {/* <Image src="/cancel.svg" alt="close" width={12.2} height={12.2} /> */}
             </div>
           </div>
         </div>

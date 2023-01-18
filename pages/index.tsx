@@ -8,6 +8,7 @@ import DiscountSection from "@/components/discount";
 
 import ImageSlider from "../components/product-details/imageSlider";
 import Specifications from "../components/product-details/specifications";
+import ProductRange from "../components/productRange";
 
 export default function Home() {
   return (
@@ -74,6 +75,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <ProductRange />
       </>
     </>
   );

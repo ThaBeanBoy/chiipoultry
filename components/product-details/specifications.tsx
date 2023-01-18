@@ -68,7 +68,9 @@ function Detail({
   return (
     <button
       onClick={() => detailClicked()}
-      className="mb-16 w-full rounded bg-white p-16 drop-shadow-lg last:mb-0"
+      className={`mb-16 ${
+        open ? "scale-[1.05] drop-shadow-2xl" : "drop-shadow-lg"
+      } w-full rounded bg-white p-16 transition last:mb-0`}
     >
       <div id="top" className="mb-8 flex items-center gap-8">
         <MdKeyboardArrowDown
