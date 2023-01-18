@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import { discountPeriod } from "../ts/discount";
 
+import Grid from "./grid";
 import { H2, H4, Body, Small } from "./typography";
 import Button from "./button";
 
@@ -77,14 +78,7 @@ export default function ProductRange() {
       <div id="section-container" className="flex flex-col items-center px-16">
         <H2 className="mb-64 text-center">Product Range</H2>
         {/* <div id="products" className="flex flex-col items-center"> */}
-        <div
-          id="products"
-          className="
-          mb-42 grid
-          max-w-[1184px] gap-16 min-[830px]:w-[800px] min-[830px]:grid-cols-3
-          min-[1218px]:w-full
-          "
-        >
+        <Grid id="products">
           {products.map((props, key) => (
             <ProductTag key={key} {...props} />
           ))}
@@ -94,7 +88,7 @@ export default function ProductRange() {
           >
             <H4>More products coming soon</H4>
           </div>
-        </div>
+        </Grid>
         <Button className="w-full max-w-[384px]">Contact Us</Button>
       </div>
     </section>
