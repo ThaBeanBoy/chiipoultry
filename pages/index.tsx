@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 
 import { H1, H2, H3, H4, Body, Small } from "../components/typography";
 import Button from "../components/button";
@@ -50,6 +51,47 @@ const afterSalesService: {
         proin nam suscipit. Eu urna aliquam metus enim
       </Body>
     ),
+  },
+];
+
+const testimonals: {
+  title: string;
+  company: React.ReactNode;
+  testimonee: string;
+  CustomerImagePath: string;
+  CustomerImagePathAlt: string;
+}[] = [
+  {
+    title: "HW Chipoyera",
+    company: <Body>Brandvlei Foods</Body>,
+    testimonee:
+      "Lorem ipsum dolor sit amet consectetur. Imperdiet nisl molestie proin nam suscipit. Eu urna aliquam metus enim egestas eget a morbi metus. Dolor elit elit tristique amet.",
+    CustomerImagePath: "/users/user1.png",
+    CustomerImagePathAlt: "user1",
+  },
+  {
+    title: "User 2",
+    company: (
+      <Link href="" className="text-attention">
+        Another Company
+      </Link>
+    ),
+    testimonee:
+      "Lorem ipsum dolor sit amet consectetur. Imperdiet nisl molestie proin nam suscipit. Eu urna aliquam metus enim egestas eget a morbi metus. Dolor elit elit tristique amet.",
+    CustomerImagePath: "/users/user2.png",
+    CustomerImagePathAlt: "user2",
+  },
+  {
+    title: "User 3",
+    company: (
+      <Link href="" className="text-attention">
+        Big Poultry
+      </Link>
+    ),
+    testimonee:
+      "Lorem ipsum dolor sit amet consectetur. Imperdiet nisl molestie proin nam suscipit. Eu urna aliquam metus enim egestas eget a morbi metus. Dolor elit elit tristique amet.",
+    CustomerImagePath: "/users/user3.png",
+    CustomerImagePathAlt: "user3",
   },
 ];
 
@@ -121,12 +163,35 @@ export default function Home() {
 
         <ProductRange />
 
+        <section id="product-videos" className="py-64">
+          <div
+            id="section-container"
+            className="mx-16 flex max-w-[1184px] flex-col items-center desktop:mx-auto"
+          >
+            <H2 className="mb-64 w-full text-center desktop:text-left">
+              Product Videos
+            </H2>
+
+            <video controls>
+              <source
+                src="./product_videos/chicks_drinking_water.mp4"
+                type="video/mp3"
+              />
+              <source
+                src="./product_videos/chicks_drinking_water.MOV"
+                type="video/MOV"
+              />
+              Your Browser Does Not Support The Video Format
+            </video>
+          </div>
+        </section>
+
         <section id="after-sales-service" className="py-64">
           <div
             id="section-container"
             className="mx-16 flex max-w-[1184px] flex-col items-center desktop:mx-auto"
           >
-            <H2 className="mb-64 text-center desktop:text-left">
+            <H2 className="mb-64 w-full text-center desktop:text-left">
               After Sales Service
             </H2>
             <Grid>
@@ -144,6 +209,56 @@ export default function Home() {
                     />
                     <H4>{title}</H4>
                     <Body className="text-center">{description}</Body>
+                  </div>
+                )
+              )}
+            </Grid>
+          </div>
+        </section>
+
+        <section id="testimonials" className="py-64">
+          <div
+            id="section-container"
+            className="mx-16 flex max-w-[1184px] flex-col items-center desktop:mx-auto"
+          >
+            <H2 className="mb-64 w-full text-center desktop:text-left">
+              Testimonials
+            </H2>
+            <Grid>
+              {testimonals.map(
+                (
+                  {
+                    title,
+                    company,
+                    testimonee,
+                    CustomerImagePath,
+                    CustomerImagePathAlt,
+                  },
+                  key
+                ) => (
+                  <div
+                    /* Testimonial Card */ key={key}
+                    className="flex max-w-[384px] flex-col gap-16 rounded bg-white p-16 drop-shadow-lg"
+                  >
+                    <Body>{testimonee}</Body>
+                    <hr />
+                    <div
+                      /* Bottom of testimonial card */ className="flex gap-8"
+                    >
+                      <Image
+                        src={CustomerImagePath}
+                        alt={CustomerImagePathAlt}
+                        className="mr-8 rounded-full"
+                        width={48}
+                        height={48}
+                      />
+                      <div /*User Details */>
+                        <Body>
+                          <b>{title}</b>
+                        </Body>
+                        {company}
+                      </div>
+                    </div>
                   </div>
                 )
               )}
