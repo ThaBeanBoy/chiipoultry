@@ -5,6 +5,7 @@ import Link from "next/link";
 import { H1, H2, H3, H4, Body, Small } from "../components/typography";
 import Button from "../components/button";
 import Grid from "../components/grid";
+import Video from "../components/video";
 
 import DiscountSection from "@/components/discount";
 
@@ -166,23 +167,30 @@ export default function Home() {
         <section id="product-videos" className="py-64">
           <div
             id="section-container"
-            className="mx-16 flex max-w-[1184px] flex-col items-center desktop:mx-auto"
+            className="flex max-w-[1184px] flex-col items-center px-16 desktop:mx-auto"
           >
             <H2 className="mb-64 w-full text-center desktop:text-left">
               Product Videos
             </H2>
 
-            <video controls>
-              <source
-                src="./product_videos/chicks_drinking_water.mp4"
-                type="video/mp3"
+            <Grid id="videos">
+              <Video
+                className="max-w-[386px]"
+                title="Chicks Drinking From Drinkers"
+                src="/product_videos/vid_of_drinker.mp4"
               />
-              <source
-                src="./product_videos/chicks_drinking_water.MOV"
-                type="video/MOV"
+
+              <Video
+                className="max-w-[386px]"
+                title="Chickens Drinking"
+                src="/product_videos/chicks_drinking_water.mp4"
               />
-              Your Browser Does Not Support The Video Format
-            </video>
+              <Video
+                className="max-w-[386px]"
+                title="Video Title"
+                src="/product_videos/mid_chickens_drinking.mp4"
+              />
+            </Grid>
           </div>
         </section>
 
