@@ -5,6 +5,8 @@ type GridProps = {
 };
 
 export default function Grid({ children, id, className }: GridProps) {
+  console.log(children);
+
   return (
     <div
       id={id}

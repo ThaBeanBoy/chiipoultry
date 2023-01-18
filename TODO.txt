@@ -1,3 +1,7 @@
+<> Fix the grid
+    <> The grid is acting funny for the product range section
+    <> If there is 1 element at the very bottom, make the last element align to center instead.
+
 <> Header
     <> Fix position sticky for the header
     <> Disable scroll when mobile navigation is open

@@ -3,12 +3,55 @@ import Image from "next/image";
 
 import { H1, H2, H3, H4, Body, Small } from "../components/typography";
 import Button from "../components/button";
+import Grid from "../components/grid";
 
 import DiscountSection from "@/components/discount";
 
 import ImageSlider from "../components/product-details/imageSlider";
 import Specifications from "../components/product-details/specifications";
 import ProductRange from "../components/productRange";
+
+const afterSalesService: {
+  imagePath: string;
+  imageAlt: string;
+
+  title: string;
+  description: string | React.ReactNode;
+}[] = [
+  {
+    imagePath: "/after_sales_icons/repairs.svg",
+    imageAlt: "Repairs",
+    title: "Repairs",
+    description: (
+      <Body>
+        Lorem ipsum <b>dolor sit amet</b> consectetur. Imperdiet nisl molestie
+        proin nam suscipit. Eu urna aliquam metus enim
+      </Body>
+    ),
+  },
+  {
+    imagePath: "/after_sales_icons/phone.svg",
+    imageAlt: "Help",
+    title: "Help",
+    description: (
+      <Body>
+        Lorem ipsum <b>dolor sit amet</b> consectetur. Imperdiet nisl molestie
+        proin nam suscipit. Eu urna aliquam metus enim
+      </Body>
+    ),
+  },
+  {
+    imagePath: "/after_sales_icons/delivery.svg",
+    imageAlt: "Delivery",
+    title: "Delivery",
+    description: (
+      <Body>
+        Lorem ipsum <b>dolor sit amet</b> consectetur. Imperdiet nisl molestie
+        proin nam suscipit. Eu urna aliquam metus enim
+      </Body>
+    ),
+  },
+];
 
 export default function Home() {
   return (
@@ -62,7 +105,7 @@ export default function Home() {
             id="section-container"
             className="mx-16 max-w-[1184px] desktop:mx-auto"
           >
-            <H2 className="mb-64 text-center prod-details-brk:text-left">
+            <H2 className="mb-64 text-center desktop:text-left">
               Product Details
             </H2>
             <div
@@ -77,6 +120,36 @@ export default function Home() {
         </section>
 
         <ProductRange />
+
+        <section id="after-sales-service" className="py-64">
+          <div
+            id="section-container"
+            className="mx-16 flex max-w-[1184px] flex-col items-center desktop:mx-auto"
+          >
+            <H2 className="mb-64 text-center desktop:text-left">
+              After Sales Service
+            </H2>
+            <Grid>
+              {afterSalesService.map(
+                ({ imagePath, imageAlt, title, description }, key) => (
+                  <div
+                    key={key}
+                    className="flex max-w-[384px] flex-col items-center gap-16 rounded bg-white p-16 drop-shadow-lg"
+                  >
+                    <Image
+                      src={imagePath}
+                      alt={imageAlt}
+                      width={64}
+                      height={64}
+                    />
+                    <H4>{title}</H4>
+                    <Body className="text-center">{description}</Body>
+                  </div>
+                )
+              )}
+            </Grid>
+          </div>
+        </section>
       </>
     </>
   );

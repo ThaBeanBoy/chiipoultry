@@ -75,9 +75,13 @@ function ProductTag({
 export default function ProductRange() {
   return (
     <section className="py-64">
-      <div id="section-container" className="flex flex-col items-center px-16">
-        <H2 className="mb-64 text-center">Product Range</H2>
-        {/* <div id="products" className="flex flex-col items-center"> */}
+      <div
+        id="section-container"
+        className="mx-auto flex max-w-[1184px] flex-col items-center px-16"
+      >
+        <H2 className="mb-64 w-full text-center desktop:text-left">
+          Product Range
+        </H2>
         <Grid id="products">
           {products.map((props, key) => (
             <ProductTag key={key} {...props} />
