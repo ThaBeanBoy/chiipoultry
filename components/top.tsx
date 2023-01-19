@@ -65,7 +65,7 @@ export default function Top() {
             key={indx}
             className={`
             ${onCurrentPath ? "" : "font-semibold"} 
-            capitalize hover:text-attention
+            capitalize transition hover:text-attention
             ${indx === navs.length - 1 ? "w-full nav-brk:w-auto" : ""}
             `}
             onClick={(e) => {

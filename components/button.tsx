@@ -9,7 +9,7 @@ type buttonProps = {
   small?: boolean;
 };
 
-const buttonStyling: string = "flex  items-start justify-center gap-8";
+const buttonStyling: string = "flex  items-center justify-center gap-8";
 
 export default function Button({
   children,
