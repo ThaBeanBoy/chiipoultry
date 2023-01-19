@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 import { useState, useEffect } from "react";
 
@@ -9,7 +10,7 @@ import { discountPeriod, period } from "../ts/discount";
 
 export default function DiscountSection() {
   const [timeLeft, setTimeLeft] = useState<period>(discountPeriod());
-
+  const router = useRouter();
   setInterval(() => setTimeLeft(discountPeriod()), 1000);
 
   return !timeLeft.ended ? (
@@ -54,7 +55,12 @@ export default function DiscountSection() {
           </H2>
         </div>
 
-        <Button className="w-full max-w-[445px] text-black">Contact Us</Button>
+        <Button
+          className="w-full max-w-[445px] text-black"
+          onClick={() => router.push("/contact-us")}
+        >
+          Contact Us
+        </Button>
       </div>
     </section>
   ) : (

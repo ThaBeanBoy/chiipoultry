@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 import { discountPeriod } from "../ts/discount";
 
@@ -73,6 +74,8 @@ function ProductTag({
 }
 
 export default function ProductRange() {
+  const router = useRouter();
+
   return (
     <section className="py-64">
       <div
@@ -93,7 +96,12 @@ export default function ProductRange() {
             <H4>More products coming soon</H4>
           </div>
         </Grid>
-        <Button className="w-full max-w-[384px]">Contact Us</Button>
+        <Button
+          className="w-full max-w-[384px]"
+          onClick={() => router.push("/contact-us")}
+        >
+          Contact Us
+        </Button>
       </div>
     </section>
   );

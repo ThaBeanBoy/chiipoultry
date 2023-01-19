@@ -1,3 +1,8 @@
+<> Alert/prompt box
+    <> Make alert/prompt box
+    <> Alet that shop is going to be made
+
+
 <> Fix the grid
     <> The grid is acting funny for the product range section
     <> If there is 1 element at the very bottom, make the last element align to center instead.
@@ -8,6 +13,7 @@
     <> The Shop button looks funny, the alignment is a little off
     <> Add a proper icon for the close button in the mobile nav
     <> Find a way to disable the red pult in the top right corner of the shop button/link
+    <> Handle the click of the Drinkers in the header
 
 <> Display discount if current date is earlier than the 
 <> Fix position of discount sticker in discount components
@@ -16,3 +22,19 @@
 <> Index
     <> Hero section
         <> Fix poisitioning of the hero when in desktop module
+
+<> Page Details
+    <> Get image of Drainage
+    <> Fill in details on all pages
+
+<> Deploy to public
+
+<> Animations
+    <> Install Framer Motion
+
+    <> Animate index Page
+        <> Product details
+
+    <> Page transitions
+
+<> Store

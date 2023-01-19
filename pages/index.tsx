@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 import { H1, H2, H3, H4, Body, Small } from "../components/typography";
 import Button from "../components/button";
@@ -97,6 +98,8 @@ const testimonals: {
 ];
 
 export default function Home() {
+  const router = useRouter();
+
   return (
     <>
       <Head>
@@ -141,7 +144,12 @@ export default function Home() {
               id="button-container"
               className="flex w-full max-w-[518px] flex-col gap-16 min-[518px]:flex-row"
             >
-              <Button className="w-full">Contact Us</Button>
+              <Button
+                className="w-full"
+                onClick={() => router.push("/contact-us")}
+              >
+                Contact Us
+              </Button>
               <Button className="w-full" outlined>
                 View Drinkers
               </Button>
