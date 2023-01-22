@@ -80,7 +80,7 @@ export default function ProductRange() {
     <section className="py-64">
       <div
         id="section-container"
-        className="mx-auto flex max-w-[1184px] flex-col items-center px-16"
+        className="mx-auto flex max-w-[1184px] flex-col items-center px-16 min-[830px]:px-0"
       >
         <H2 className="mb-64 w-full text-center desktop:text-left">
           Product Range

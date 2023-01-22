@@ -183,7 +183,7 @@ export default function Home() {
         <section id="product-videos" className="py-64">
           <div
             id="section-container"
-            className="flex max-w-[1184px] flex-col items-center px-16 desktop:mx-auto"
+            className="flex max-w-[1184px] flex-col items-center px-16 min-[830px]:px-0 desktop:mx-auto"
           >
             <H2 className="mb-64 w-full text-center desktop:text-left">
               Product Videos

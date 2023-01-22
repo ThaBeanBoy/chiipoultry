@@ -2,9 +2,10 @@
     >< Make alert/prompt box
     >< Alet that shop is going to be made
 
-
 <> Fix the grid
-    <> The grid is acting funny for the product range section
+    >< The grid is acting funny
+        >< product range section
+        ><Video section
     <> If there is 1 element at the very bottom, make the last element align to center instead.
 
 <> Header
@@ -28,6 +29,16 @@
     <> Fill in details on all pages
 
 <> Deploy website
+    <> Deploy website
+    <> Notify clients
+
+<> Add multilingual support
+    <> English
+    <> isiZulu
+    <> seTswana
+    <> Afrikaans
+
+<> Time Table Generator
 
 <> Animations
     <> Install Framer Motion
