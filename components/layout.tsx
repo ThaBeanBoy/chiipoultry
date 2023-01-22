@@ -18,7 +18,7 @@ export default function Layout({ children }: LayoutProps) {
       className={`${mont.className} min-h-screen overflow-visible bg-white text-black`}
     >
       <Top />
-      <main>{children}</main>
+      <main className="overflow-scroll">{children}</main>
       <DiscountSection />
       <Footer />
     </div>

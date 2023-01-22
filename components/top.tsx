@@ -7,6 +7,7 @@ import { useState } from "react";
 import { IoMdClose } from "react-icons/Io";
 
 import Button from "./button";
+import { H3, Body } from "./typography";
 
 type nav = {
   path: string;
@@ -36,23 +37,12 @@ const navs: nav[] = [
     path: "/contact-us",
     content: "contact us",
   },
-  {
-    path: "/contact-us",
-    content: (
-      <Button className="w-full text-body" small>
-        shop <Image src="/cart.svg" alt="cart" height={16} width={16} />
-        <span className="absolute top-0 right-0 flex h-8 w-8 translate-y-[-4px] translate-x-[4px]">
-          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-attention opacity-75"></span>
-          <span className="relative inline-flex h-8 w-8 rounded-full bg-attention"></span>
-        </span>
-      </Button>
-    ),
-  },
 ];
 
 export default function Top() {
   const router = useRouter();
   const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false);
+  const [alertBoxOpen, setAlertBoxOpen] = useState<boolean>(false);
 
   const Nav = ({ routerPath, className }: NavProps) => (
     <nav className={className !== undefined ? className : ""}>
@@ -83,11 +73,58 @@ export default function Top() {
           </Link>
         );
       })}
+      <Button
+        className="text-body font-semibold"
+        small
+        onClick={() => setAlertBoxOpen(true)}
+      >
+        shop <Image src="/cart.svg" alt="cart" height={16} width={16} />
+        <span className="absolute top-0 right-0 flex h-8 w-8 translate-y-[-4px] translate-x-[4px]">
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-attention opacity-75"></span>
+          <span className="relative inline-flex h-8 w-8 rounded-full bg-attention"></span>
+        </span>
+      </Button>
     </nav>
   );
 
   return (
     <>
+      {alertBoxOpen ? (
+        <div
+          id="alert-bg"
+          className="fixed top-0 left-0 z-[1000] flex h-screen w-screen flex-col items-center justify-center gap-8 bg-black-faded"
+        >
+          <div
+            id="alert"
+            className="flex w-full max-w-[384px] flex-col items-end justify-center gap-8"
+          >
+            <Button onClick={() => setAlertBoxOpen(false)}>
+              <IoMdClose />
+            </Button>
+
+            <div
+              id="container"
+              className="flex w-full flex-col items-center gap-8 rounded bg-white p-16"
+            >
+              <Image
+                src="/after_sales_icons/repairs.svg"
+                alt="under construction"
+                width={64}
+                height={64}
+              />
+              <H3>Under Construction</H3>
+              <hr className="w-full" />
+              <Body className="text-center">
+                <b>Chiipoultry online store is still under construction. </b>
+                The store will be launched soon & users will be notified then.
+              </Body>
+            </div>
+          </div>
+        </div>
+      ) : (
+        <></>
+      )}
+
       {mobileNavOpen ? (
         <div
           id="mobile-nav"

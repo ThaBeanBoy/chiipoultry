@@ -1,6 +1,6 @@
-<> Alert/prompt box
-    <> Make alert/prompt box
-    <> Alet that shop is going to be made
+>< Alert/prompt box
+    >< Make alert/prompt box
+    >< Alet that shop is going to be made
 
 
 <> Fix the grid
@@ -27,7 +27,7 @@
     <> Get image of Drainage
     <> Fill in details on all pages
 
-<> Deploy to public
+<> Deploy website
 
 <> Animations
     <> Install Framer Motion
