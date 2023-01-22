@@ -16,8 +16,10 @@
     <> Find a way to disable the red pult in the top right corner of the shop button/link
     <> Handle the click of the Drinkers in the header
 
-<> Display discount if current date is earlier than the 
+<> Display discount if current date is earlier than the
+
 <> Fix position of discount sticker in discount components
+
 <> The image slider in the product range has a mysterious margin coming out of nowhere, fix it bruv 
 
 <> Index

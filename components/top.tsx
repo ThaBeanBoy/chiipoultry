@@ -76,7 +76,10 @@ export default function Top() {
       <Button
         className="text-body font-semibold"
         small
-        onClick={() => setAlertBoxOpen(true)}
+        onClick={() => {
+          setMobileNavOpen(false);
+          setAlertBoxOpen(true);
+        }}
       >
         shop <Image src="/cart.svg" alt="cart" height={16} width={16} />
         <span className="absolute top-0 right-0 flex h-8 w-8 translate-y-[-4px] translate-x-[4px]">
@@ -92,7 +95,7 @@ export default function Top() {
       {alertBoxOpen ? (
         <div
           id="alert-bg"
-          className="fixed top-0 left-0 z-[1000] flex h-screen w-screen flex-col items-center justify-center gap-8 bg-black-faded"
+          className="fixed top-0 left-0 z-[1000] flex h-screen w-screen flex-col items-center justify-center gap-8 bg-black-faded px-16"
         >
           <div
             id="alert"

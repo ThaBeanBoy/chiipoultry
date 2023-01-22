@@ -14,6 +14,9 @@ module.exports = {
 
       "nav-brk": "868px",
       "prod-details-brk": "1100px",
+
+      "grid-3-col-screen": "1218px",
+      "grid-2-col-screen": "830px",
     },
 
     fontSize: {
