@@ -3,7 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { H2, H4, Body } from "../components/typography";
-import Grid from "../components/grid";
+// import Grid from "../components/grid";
+
+import dynamic from "next/dynamic";
+
+const Grid = dynamic(() => import("../components/grid"), {
+  ssr: false,
+});
 
 const contactPoints: {
   imgPath: string;

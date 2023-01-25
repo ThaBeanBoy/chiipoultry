@@ -3,9 +3,15 @@ import { useRouter } from "next/router";
 
 import { discountPeriod } from "../ts/discount";
 
-import Grid from "./grid";
+// import Grid from "./grid";
 import { H2, H4, Body, Small } from "./typography";
 import Button from "./button";
+
+import dynamic from "next/dynamic";
+
+const Grid = dynamic(() => import("./grid"), {
+  ssr: false,
+});
 
 type productProps = {
   title: string;

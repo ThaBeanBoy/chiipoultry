@@ -5,8 +5,11 @@ import { useRouter } from "next/router";
 
 import { H1, H2, H3, H4, Body, Small } from "../components/typography";
 import Button from "../components/button";
-import Grid from "../components/grid";
 import Video from "../components/video";
+import dynamic from "next/dynamic";
+const Grid = dynamic(() => import("../components/grid"), {
+  ssr: false,
+});
 
 import DiscountSection from "@/components/discount";
 
@@ -63,6 +66,22 @@ const testimonals: {
   CustomerImagePath: string;
   CustomerImagePathAlt: string;
 }[] = [
+  {
+    title: "HW Chipoyera",
+    company: <Body>Brandvlei Foods</Body>,
+    testimonee:
+      "Lorem ipsum dolor sit amet consectetur. Imperdiet nisl molestie proin nam suscipit. Eu urna aliquam metus enim egestas eget a morbi metus. Dolor elit elit tristique amet.",
+    CustomerImagePath: "/users/user1.png",
+    CustomerImagePathAlt: "user1",
+  },
+  {
+    title: "HW Chipoyera",
+    company: <Body>Brandvlei Foods</Body>,
+    testimonee:
+      "Lorem ipsum dolor sit amet consectetur. Imperdiet nisl molestie proin nam suscipit. Eu urna aliquam metus enim egestas eget a morbi metus. Dolor elit elit tristique amet.",
+    CustomerImagePath: "/users/user1.png",
+    CustomerImagePathAlt: "user1",
+  },
   {
     title: "HW Chipoyera",
     company: <Body>Brandvlei Foods</Body>,

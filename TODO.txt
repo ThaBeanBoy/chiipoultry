@@ -6,7 +6,11 @@
     >< The grid is acting funny
         >< product range section
         ><Video section
-    <> If there is 1 element at the very bottom, make the last element align to center instead.
+    <> Alter last few elements of Grid
+        >< 2 col
+        <> 3 col
+            <> 1 element at end
+            <> 2 elements at end
 
 <> Header
     <> Fix position sticky for the header
@@ -17,6 +21,7 @@
     <> Handle the click of the Drinkers in the header
 
 <> Display discount if current date is earlier than the
+    <> Make Discount hook kinda like how you use the useWindowDimension hook
 
 <> Fix position of discount sticker in discount components
 
