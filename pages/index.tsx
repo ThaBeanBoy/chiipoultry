@@ -75,22 +75,6 @@ const testimonals: {
     CustomerImagePathAlt: "user1",
   },
   {
-    title: "HW Chipoyera",
-    company: <Body>Brandvlei Foods</Body>,
-    testimonee:
-      "Lorem ipsum dolor sit amet consectetur. Imperdiet nisl molestie proin nam suscipit. Eu urna aliquam metus enim egestas eget a morbi metus. Dolor elit elit tristique amet.",
-    CustomerImagePath: "/users/user1.png",
-    CustomerImagePathAlt: "user1",
-  },
-  {
-    title: "HW Chipoyera",
-    company: <Body>Brandvlei Foods</Body>,
-    testimonee:
-      "Lorem ipsum dolor sit amet consectetur. Imperdiet nisl molestie proin nam suscipit. Eu urna aliquam metus enim egestas eget a morbi metus. Dolor elit elit tristique amet.",
-    CustomerImagePath: "/users/user1.png",
-    CustomerImagePathAlt: "user1",
-  },
-  {
     title: "User 2",
     company: (
       <Link href="" className="text-attention">
