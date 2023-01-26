@@ -123,7 +123,7 @@ export default function Home() {
         {/* Hero Section */}
         <section
           id="landing"
-          className="flex flex-col items-center py-64
+          className="flex flex-col items-center pb-64 pt-128
           desktop:flex-row-reverse desktop:gap-16"
         >
           <Image

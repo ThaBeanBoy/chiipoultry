@@ -11,7 +11,7 @@ export default function aboutUs() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo_mini.svg" />
       </Head>
-      <section className="flex flex-col items-center px-16">
+      <section className="flex flex-col items-center px-16 pt-64">
         <H2 className="mt-64 mb-32">About Us</H2>
 
         <div

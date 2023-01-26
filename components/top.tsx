@@ -151,29 +151,39 @@ export default function Top() {
       ) : (
         <></>
       )}
-      <header className="sticky z-0 mx-auto flex w-full max-w-[1184px] items-center justify-between bg-white px-16 py-16 nav-brk:py-24">
-        <Link href="/" className="nav-brk:hidden">
-          <Image src="/logo_mini_black.svg" alt="logo" width={32} height={32} />
-        </Link>
+      <div
+        id="header-container"
+        className="fixed top-0 z-[5] w-full bg-white-faded shadow-md"
+      >
+        <header className="mx-auto flex w-full max-w-[1184px] items-center justify-between px-16 py-16 nav-brk:py-24">
+          <Link href="/" className="nav-brk:hidden">
+            <Image
+              src="/logo_mini_black.svg"
+              alt="logo"
+              width={32}
+              height={32}
+            />
+          </Link>
 
-        <Link href="/" className="hidden nav-brk:block">
-          <Image src="/logo.svg" alt="logo" width={255} height={64} />
-        </Link>
+          <Link href="/" className="hidden nav-brk:block">
+            <Image src="/logo.svg" alt="logo" width={255} height={64} />
+          </Link>
 
-        <Image
-          src="/hamburger.svg"
-          className="nav-brk:hidden"
-          alt="open nav"
-          width={24}
-          height={16}
-          onClick={() => setMobileNavOpen(true)}
-        />
+          <Image
+            src="/hamburger.svg"
+            className="nav-brk:hidden"
+            alt="open nav"
+            width={24}
+            height={16}
+            onClick={() => setMobileNavOpen(true)}
+          />
 
-        <Nav
-          className="hidden items-center gap-42 nav-brk:flex"
-          routerPath={router.pathname}
-        />
-      </header>
+          <Nav
+            className="hidden items-center gap-42 nav-brk:flex"
+            routerPath={router.pathname}
+          />
+        </header>
+      </div>
     </>
   );
 }

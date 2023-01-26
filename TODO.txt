@@ -2,23 +2,23 @@
     >< Make alert/prompt box
     >< Alet that shop is going to be made
 
-<> Fix the grid
+>< Fix the grid
     >< The grid is acting funny
         >< product range section
         ><Video section
-    <> Alter last few elements of Grid
+    >< Alter last few elements of Grid
         >< 2 col
-        <> 3 col
-            <> 1 element at end
-            <> 2 elements at end
+        >< 3 col
+            >< 1 element at end
+            >< 2 elements at end
 
 <> Header
-    <> Fix position sticky for the header
-    <> Disable scroll when mobile navigation is open
-    <> The Shop button looks funny, the alignment is a little off
+    >< Fix position sticky for the header
+    >< The Shop button looks funny, the alignment is a little off
     <> Add a proper icon for the close button in the mobile nav
     <> Find a way to disable the red pult in the top right corner of the shop button/link
     <> Handle the click of the Drinkers in the header
+    <> Disable scroll when mobile navigation is open
 
 <> Display discount if current date is earlier than the
     <> Make Discount hook kinda like how you use the useWindowDimension hook

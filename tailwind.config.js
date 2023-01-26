@@ -42,6 +42,7 @@ module.exports = {
       active: "#FFEB66",
       attention: "#D34723",
       "black-faded": "#323444BF",
+      "white-faded": "#FAFAFAF2",
     },
 
     spacing: {
@@ -54,6 +55,7 @@ module.exports = {
       42: "42px",
       48: "48px",
       64: "64px",
+      128: "128px",
     },
 
     extend: {

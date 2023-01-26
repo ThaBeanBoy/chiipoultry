@@ -62,7 +62,7 @@ export default function contactUs() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo_mini.svg" />
       </Head>
-      <section className="flex flex-col items-center">
+      <section className="flex flex-col items-center pt-64">
         <H2 className="mt-64 mb-32">Contact Us</H2>
         <Grid>
           {contactPoints.map(
