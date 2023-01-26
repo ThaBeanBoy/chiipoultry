@@ -12,6 +12,7 @@ import { H3, Body } from "./typography";
 type nav = {
   path: string;
   content: string | React.ReactNode;
+  navClick?: Function;
 };
 
 type NavProps = {
@@ -26,8 +27,8 @@ const navs: nav[] = [
     content: "home",
   },
   {
-    path: "/",
-    content: "drinker",
+    path: "/#product-details",
+    content: "drinkers",
   },
   {
     path: "/about-us",
@@ -47,7 +48,7 @@ export default function Top() {
 
   const Nav = ({ routerPath, className }: NavProps) => (
     <nav className={className !== undefined ? className : ""}>
-      {navs.map(({ path, content }, indx) => {
+      {navs.map(({ path, content, navClick }, indx) => {
         const onCurrentPath: boolean = path === routerPath;
 
         return (
@@ -65,6 +66,10 @@ export default function Top() {
 
               //closing the mobile nav
               setMobileNavOpen(false);
+
+              if (navClick !== undefined) {
+                navClick();
+              }
 
               //changing the route
               router.push(path);

@@ -20,8 +20,7 @@
     <> Handle the click of the Drinkers in the header
     <> Disable scroll when mobile navigation is open
 
-<> Display discount if current date is earlier than the
-    <> Make Discount hook kinda like how you use the useWindowDimension hook
+<> Make Discount hook kinda like how you use the useWindowDimension hook
 
 <> Fix position of discount sticker in discount components
 

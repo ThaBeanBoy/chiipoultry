@@ -147,15 +147,14 @@ export default function Home() {
               id="button-container"
               className="flex w-full max-w-[518px] flex-col gap-16 min-[518px]:flex-row"
             >
-              <Button
-                className="w-full"
-                onClick={() => router.push("/contact-us")}
-              >
-                Contact Us
-              </Button>
-              <Button className="w-full" outlined>
-                View Drinkers
-              </Button>
+              <Link href="/contact-us" className="w-full">
+                <Button className="w-full">Contact Us</Button>
+              </Link>
+              <Link href="#product-details" scroll={false} className="w-full">
+                <Button className="w-full" outlined>
+                  View Drinkers
+                </Button>
+              </Link>
             </div>
           </div>
         </section>
