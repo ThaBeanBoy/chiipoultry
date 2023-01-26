@@ -15,8 +15,8 @@
 <> Header
     >< Fix position sticky for the header
     >< The Shop button looks funny, the alignment is a little off
-    <> Add a proper icon for the close button in the mobile nav
-    <> Find a way to disable the red pult in the top right corner of the shop button/link
+    >< Add a proper icon for the close button in the mobile nav
+    >< Find a way to disable the red pulse in the top right corner of the shop button/link
     <> Handle the click of the Drinkers in the header
     <> Disable scroll when mobile navigation is open
 

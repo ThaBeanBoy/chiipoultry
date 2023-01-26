@@ -43,6 +43,7 @@ export default function Top() {
   const router = useRouter();
   const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false);
   const [alertBoxOpen, setAlertBoxOpen] = useState<boolean>(false);
+  const [shopButtonClicked, setShopButtonClicked] = useState<boolean>(false);
 
   const Nav = ({ routerPath, className }: NavProps) => (
     <nav className={className !== undefined ? className : ""}>
@@ -77,15 +78,26 @@ export default function Top() {
         className="text-body font-semibold"
         small
         onClick={() => {
+          // closing the mobile navigation
           setMobileNavOpen(false);
+
+          // disabling the pulse of the shop button
+          setShopButtonClicked(true);
+          console.log("danko", shopButtonClicked);
+
+          //alerting the user of the current stauts of the online shop
           setAlertBoxOpen(true);
         }}
       >
         shop <Image src="/cart.svg" alt="cart" height={16} width={16} />
-        <span className="absolute top-0 right-0 flex h-8 w-8 translate-y-[-4px] translate-x-[4px]">
-          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-attention opacity-75"></span>
-          <span className="relative inline-flex h-8 w-8 rounded-full bg-attention"></span>
-        </span>
+        {!shopButtonClicked ? (
+          <span className="absolute top-0 right-0 flex h-8 w-8 translate-y-[-4px] translate-x-[4px]">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-attention opacity-75"></span>
+            <span className="relative inline-flex h-8 w-8 rounded-full bg-attention"></span>
+          </span>
+        ) : (
+          <></>
+        )}
       </Button>
     </nav>
   );
@@ -119,7 +131,8 @@ export default function Top() {
               <hr className="w-full" />
               <Body className="text-center">
                 <b>Chiipoultry online store is still under construction. </b>
-                The store will be launched soon & users will be notified then.
+                The store will be launched soon & users/customers will be
+                notified then.
               </Body>
             </div>
           </div>
