@@ -22,11 +22,9 @@
 
 >< Make Discount hook kinda like how you use the useWindowDimension hook
 
-<> Fix position of discount sticker in discount components
+>< Fix position of discount sticker in discount components
 
-<> Index
-    <> Hero section
-        <> Fix poisitioning of the hero when in desktop module
+<> Fix poisitioning of the hero when in desktop module
 
 <> Page Details
     <> Get image of Drainage
