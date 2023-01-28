@@ -6,12 +6,11 @@ import { useState, useEffect } from "react";
 import { H2, H3, Body } from "./typography";
 import Button from "./button";
 
-import { discountPeriod, period } from "../ts/discount";
+import useDiscountPeriod from "../ts/discount";
 
 export default function DiscountSection() {
-  const [timeLeft, setTimeLeft] = useState<period>(discountPeriod());
+  const timeLeft = useDiscountPeriod();
   const router = useRouter();
-  setInterval(() => setTimeLeft(discountPeriod()), 1000);
 
   return !timeLeft.ended ? (
     <section className="w-full bg-black">

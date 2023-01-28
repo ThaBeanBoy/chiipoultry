@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+
 export type period = {
   days: number;
   hours: number;
@@ -38,4 +40,14 @@ function discountPeriod(): period {
   };
 }
 
-export { discountPeriod };
+export default function useDiscountPeriod(): period {
+  const [discount, setDiscount] = useState(discountPeriod());
+
+  useEffect(() => {
+    setInterval(() => setDiscount(discountPeriod()), 1000);
+  }, []);
+
+  return discount;
+}
+
+// export { discountPeriod, useDiscountPeriod };

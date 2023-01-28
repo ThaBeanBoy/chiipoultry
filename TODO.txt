@@ -12,19 +12,17 @@
             >< 1 element at end
             >< 2 elements at end
 
-<> Header
+>< Header
     >< Fix position sticky for the header
     >< The Shop button looks funny, the alignment is a little off
     >< Add a proper icon for the close button in the mobile nav
     >< Find a way to disable the red pulse in the top right corner of the shop button/link
-    <> Handle the click of the Drinkers in the header
+    >< Handle the click of the Drinkers in the header
     <> Disable scroll when mobile navigation is open
 
-<> Make Discount hook kinda like how you use the useWindowDimension hook
+>< Make Discount hook kinda like how you use the useWindowDimension hook
 
 <> Fix position of discount sticker in discount components
-
-<> The image slider in the product range has a mysterious margin coming out of nowhere, fix it bruv 
 
 <> Index
     <> Hero section
@@ -37,6 +35,11 @@
 <> Deploy website
     <> Deploy website
     <> Notify clients
+
+<> Add email input that notifies users / customers that the online store is up
+    <> Disable the pulse on the shop button
+
+<> The image slider in the product range has a mysterious margin coming out of nowhere, fix it bruv 
 
 <> Add multilingual support
     <> English

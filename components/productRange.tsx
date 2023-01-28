@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
 
-import { discountPeriod } from "../ts/discount";
+import useDiscountPeriod from "../ts/discount";
 
 // import Grid from "./grid";
 import { H2, H4, Body, Small } from "./typography";
@@ -17,7 +17,7 @@ type productProps = {
   title: string;
   description: string;
   price: number;
-  discounted: boolean | undefined;
+  discounted?: boolean;
 
   imgPath: string;
   imgAlt: string;
@@ -29,7 +29,6 @@ const products: productProps[] = [
     description:
       "Lorem ipsum dolor sit amet consectetur. Imperdiet nisl molestie proin nam suscipit. Eu urna aliquam metus enim egestas eget a morbi metus. Dolor elit elit tristique amet.",
     price: 250,
-    discounted: !discountPeriod().ended,
     imgPath: "/product_range/standard.png",
     imgAlt: "Drinker Standard Edition",
   },
@@ -38,7 +37,6 @@ const products: productProps[] = [
     description:
       "Lorem ipsum dolor sit amet consectetur. Imperdiet nisl molestie proin nam suscipit. Eu urna aliquam metus enim egestas eget a morbi metus. Dolor elit elit tristique amet.",
     price: 270,
-    discounted: !discountPeriod().ended,
     imgPath: "/product_range/standard.png",
     imgAlt: "Drinker Drainage Edition",
   },
@@ -80,6 +78,8 @@ function ProductTag({
 }
 
 export default function ProductRange() {
+  let discount = useDiscountPeriod();
+
   const router = useRouter();
 
   return (
@@ -93,7 +93,7 @@ export default function ProductRange() {
         </H2>
         <Grid id="products">
           {products.map((props, key) => (
-            <ProductTag key={key} {...props} />
+            <ProductTag key={key} {...props} discounted={!discount.ended} />
           ))}
           <div
             id="coming-soon"
