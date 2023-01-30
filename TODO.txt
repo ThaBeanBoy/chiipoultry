@@ -24,11 +24,12 @@
 
 >< Fix position of discount sticker in discount components
 
-<> Fix poisitioning of the hero when in desktop module
+>< Fix poisitioning of the hero when in desktop module
 
 <> Page Details
     <> Get image of Drainage
     <> Fill in details on all pages
+    <> Update footer
 
 <> Deploy website
     <> Deploy website

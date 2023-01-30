@@ -26,8 +26,7 @@ type productProps = {
 const products: productProps[] = [
   {
     title: "Standard",
-    description:
-      "Lorem ipsum dolor sit amet consectetur. Imperdiet nisl molestie proin nam suscipit. Eu urna aliquam metus enim egestas eget a morbi metus. Dolor elit elit tristique amet.",
+    description: "Standard Edition paragraph.",
     price: 250,
     imgPath: "/product_range/standard.png",
     imgAlt: "Drinker Standard Edition",
@@ -37,7 +36,7 @@ const products: productProps[] = [
     description:
       "Lorem ipsum dolor sit amet consectetur. Imperdiet nisl molestie proin nam suscipit. Eu urna aliquam metus enim egestas eget a morbi metus. Dolor elit elit tristique amet.",
     price: 270,
-    imgPath: "/product_range/standard.png",
+    imgPath: "/product_range/drainage.png",
     imgAlt: "Drinker Drainage Edition",
   },
 ];

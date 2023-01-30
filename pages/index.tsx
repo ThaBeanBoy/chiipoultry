@@ -123,7 +123,8 @@ export default function Home() {
         {/* Hero Section */}
         <section
           id="landing"
-          className="flex flex-col items-center pb-64 pt-128
+          className="mx-auto flex max-w-[1184px] flex-col items-center
+          pb-64 pt-128 desktop:relative 
           desktop:flex-row-reverse desktop:gap-16"
         >
           <Image
