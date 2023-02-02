@@ -31,7 +31,7 @@ export default function Button({
       onClick={onClick !== undefined ? () => onClick() : () => {}}
     >
       {small ? (
-        <Body className={buttonStyling}>{children}</Body>
+        <div className={buttonStyling}>{children}</div>
       ) : (
         <H4 className={buttonStyling}>{children}</H4>
       )}

@@ -38,7 +38,7 @@ function Detail({
       onClick={() => detailClicked()}
       className={`mb-16 ${
         open ? "scale-[1.05] drop-shadow-2xl" : "drop-shadow-lg"
-      } w-full rounded bg-white p-16 transition last:mb-0`}
+      } w-full rounded bg-white p-24 text-left transition last:mb-0`}
     >
       <div id="top" className="mb-8 flex items-center gap-8">
         <MdKeyboardArrowDown
@@ -69,16 +69,14 @@ export default function Specifications() {
             physical labour.
           </Body>
 
-          <Body className="mb-16">
-            <ol className="list-decimal">
-              <li>Place an empty drinker in the position you want.</li>
-              <li>Insert medicine (optional).</li>
-              <li>
-                Put water in using a hose pipe, bucket or carry the water, your
-                choice.
-              </li>
-            </ol>
-          </Body>
+          <ol className="mb-16 list-decimal">
+            <li>Place an empty drinker in the position you want.</li>
+            <li>Insert medicine (optional).</li>
+            <li>
+              Put water in using a hose pipe, bucket or carry the water, your
+              choice.
+            </li>
+          </ol>
 
           <Body className="mb-16 font-semibold">
             There is no back-breaking labour required.

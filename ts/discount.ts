@@ -46,6 +46,7 @@ export default function useDiscountPeriod(): period {
     hours: 0,
     minutes: 0,
     seconds: 0,
+    // ended: discountEndDate.valueOf() - new Date().valueOf() < 0
   });
 
   useEffect(() => {
