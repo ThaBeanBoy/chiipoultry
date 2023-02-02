@@ -18,30 +18,40 @@ export default function aboutUs() {
           id="text-container"
           className="mb-64 flex max-w-[480px] flex-col gap-24 min-[480px]:text-justify"
         >
-          <Body>
-            Lorem ipsum dolor sit amet consectetur. Duis sit in urna elementum
-            arcu enim. Suscipit cras feugiat leo integer morbi lectus nibh
-            facilisis. Accumsan eu mauris sed nunc ut dolor nisl. Nibh bibendum
-            facilisis ut aliquet aenean eu nulla sit.
+          <Body className="mb-16">
+            <span className="font-semibold">Chiipoultry</span> is a company
+            dedicated to providing poultry farmers with quality equipment. A
+            relatively new company with big dreams.
+          </Body>
+          <Body className="mb-16">
+            We not only look to deliver quality products but also resources to
+            <span className="font-semibold">
+              aid poultry farmers in their businesses.
+            </span>{" "}
+            We recognise that poultry can be a challenging endeavour, so we aim
+            to make your life easier.
+          </Body>
+          <Body className="mb-16">
+            <span className="font-semibold">Chiipoultry Online Store,</span> the
+            online store will help all poultry acquire the equipment they desire
+            with the ease of a few clicks.
+          </Body>
+          <Body className="mb-16">
+            <span className="font-semibold">Chiipoultry Articles,</span> this
+            resource is coming soon. Articles are written by poultry farmers,{" "}
+            <span className="font-semibold">for poultry farmers.</span> The
+            articles are written to aid potential & current poultry farmers, no
+            matter the level & years of experience you might have.
           </Body>
           <Body>
-            Nibh nibh leo praesent cras nec quam sit praesent. Parturient mauris
-            praesent nunc lectus quis. Orci vel vestibulum tellus nec magna in
-            praesent. Nunc tincidunt integer purus id volutpat interdum.
-            Faucibus ultricies fames adipiscing sem nisl aliquet. Ut proin
-            tristique sed in. Nisl sit iaculis maecenas sed in. Quis nec in
-            molestie maecenas. Lectus integer vulputate aliquet scelerisque
-            aliquet diam. Vulputate risus non faucibus non ornare sit ipsum sed
-            elementum. Libero in massa egestas pretium suspendisse tellus donec
-            lacus risus. Praesent quis potenti id cursus tincidunt est tortor.
-          </Body>
-          <Body>
-            Ipsum enim nunc nisl dictumst odio suspendisse lacus vel. Tortor
-            orci diam sit orci ornare arcu. Nunc mattis commodo tellus quis in
-            non scelerisque tincidunt. Velit tincidunt vitae eget aliquam
-            malesuada sagittis varius eget in. Tortor luctus egestas mattis
-            senectus commodo eget dui. Sed pharetra enim ultrices ornare eget
-            lacus ultricies.
+            Stick around for a while, some of the things that are coming are the{" "}
+            <span className="font-semibold">
+              Chiipoultry Chicken Time Table Generator.
+            </span>{" "}
+            This will automatically generate a timetable for your specific batch
+            that arrived on a specific date. This is one of the unnecessary
+            overheads that could be automated, & we plan to make this resource
+            free for all poultry farmers.
           </Body>
         </div>
       </section>

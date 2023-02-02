@@ -27,16 +27,41 @@
 >< Fix poisitioning of the hero when in desktop module
 
 <> Page Details
-    <> Get image of Drainage
+    >< Get image of Drainage
     <> Fill in details on all pages
+        >< Price down Contnent
+        >< index
+            >< Product Details
+            >< Product Range
+            >< After Sales Services
+            >< Testimonials
+        >< About Us
+        >< Contact Us
     <> Update footer
 
 <> Deploy website
+    >< Facebook page
+
     <> Deploy website
+
+    <> Domain Name
+        <> Obtain domain name
+        <> connect vercel to domain name
+    
     <> Notify clients
+        <> Page
+        <> Groups
+
+    <> Add google analytics
+
+
+<> Increasing web vitals
+
+<> Set up firebase backend
 
 <> Add email input that notifies users / customers that the online store is up
-    <> Disable the pulse on the shop button
+    <> Emails collection
+
 
 <> The image slider in the product range has a mysterious margin coming out of nowhere, fix it bruv 
 
@@ -48,6 +73,21 @@
 
 <> Time Table Generator
 
+<> Articles
+    <> Admins
+        <> Articles collection
+        <> Articles admin panel
+        <> Articles edit panel
+        <> Article page
+
+    <> User
+        <> User Dashboard
+            <> Saved Articles
+
+    <> Next Js ISR
+
+    <> Premium vs Standard articles
+
 <> Animations
     <> Install Framer Motion
 
@@ -57,3 +97,14 @@
     <> Page transitions
 
 <> Store
+    <> Users collection (Brandvleit Foods & Chiipoultry share common backend)
+    <> Products collection
+
+    <> Stripe
+        <> Cloud functions
+
+    <> Notify signed up users (use Firebase cloud functions & Node Js to send emails - remember you can send html in emails too)
+
+<> Online Lessons
+
+Poultry Finance Manager App

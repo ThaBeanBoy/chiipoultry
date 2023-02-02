@@ -22,25 +22,22 @@ const contactPoints: {
     imgPath: "/contact-icons/facebook.svg",
     imgAlt: "facebook",
     title: "Our Facebook Page",
-    description:
-      "Lorem ipsum dolor sit amet consectetur. Imperdiet nisl molestie proin nam suscipit. Eu urna aliquam metus enim",
+    description: "View Our Facebook Page",
 
-    href: "",
+    href: "https://www.facebook.com/Chiipoultry-106271105702644",
   },
   {
     imgPath: "/contact-icons/phone.svg",
     imgAlt: "Phone",
     title: "+27 67 952 7480",
-    description:
-      "Lorem ipsum dolor sit amet consectetur. Imperdiet nisl molestie proin nam suscipit. Eu urna aliquam metus enim",
+    description: "Phone us anytime",
     href: "tel:+27679527480",
   },
   {
     imgPath: "/contact-icons/gmail.svg",
     imgAlt: "Email",
     title: "chiipoultry@gmail.com",
-    description:
-      "Lorem ipsum dolor sit amet consectetur. Imperdiet nisl molestie proin nam suscipit. Eu urna aliquam metus enim",
+    description: "Send us an email",
     href: "mailto:chiipoultry@gmail.com",
   },
 ];

@@ -15,7 +15,7 @@ const Grid = dynamic(() => import("./grid"), {
 
 type productProps = {
   title: string;
-  description: string;
+  description: string | React.ReactNode;
   price: number;
   discounted?: boolean;
 
@@ -26,15 +26,33 @@ type productProps = {
 const products: productProps[] = [
   {
     title: "Standard",
-    description: "Standard Edition paragraph.",
+    description: (
+      <Body>
+        The standard drinker, incorporates all the previously discussed features
+        & specifications discussed above. This is a great starting point to see
+        how useful the bucket can be on your poultry farm.
+      </Body>
+    ),
     price: 250,
     imgPath: "/product_range/standard.png",
     imgAlt: "Drinker Standard Edition",
   },
   {
     title: "Drainage",
-    description:
-      "Lorem ipsum dolor sit amet consectetur. Imperdiet nisl molestie proin nam suscipit. Eu urna aliquam metus enim egestas eget a morbi metus. Dolor elit elit tristique amet.",
+    description: (
+      <Body>
+        An extension of the standard, the drainage is for the poultry farmer
+        that works a lot with medicine. The drainage outlet allows for{" "}
+        <span className="font-semibold">
+          easy swapping between medicines & allows an easier way to drain water
+        </span>
+        {/* An extension of the standard, the drainage is for the pou;ltry farmer
+        that works alot with medicine. The drainage outlet allows for{" "}
+        <b>
+          easy swapping between medicines & allows easier way to drain water
+        </b> */}
+      </Body>
+    ),
     price: 270,
     imgPath: "/product_range/drainage.png",
     imgAlt: "Drinker Drainage Edition",

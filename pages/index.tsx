@@ -30,8 +30,8 @@ const afterSalesService: {
     title: "Repairs",
     description: (
       <Body>
-        Lorem ipsum <b>dolor sit amet</b> consectetur. Imperdiet nisl molestie
-        proin nam suscipit. Eu urna aliquam metus enim
+        If any problems arise with our products, you can come to us for any
+        repairs.
       </Body>
     ),
   },
@@ -41,8 +41,12 @@ const afterSalesService: {
     title: "Help",
     description: (
       <Body>
-        Lorem ipsum <b>dolor sit amet</b> consectetur. Imperdiet nisl molestie
-        proin nam suscipit. Eu urna aliquam metus enim
+        You can contact us anytime if you require our assistance. You can find
+        our contact details{" "}
+        <Link href="/contact-us" className="font-semibold text-attention">
+          here
+        </Link>
+        .
       </Body>
     ),
   },
@@ -51,10 +55,7 @@ const afterSalesService: {
     imageAlt: "Delivery",
     title: "Delivery",
     description: (
-      <Body>
-        Lorem ipsum <b>dolor sit amet</b> consectetur. Imperdiet nisl molestie
-        proin nam suscipit. Eu urna aliquam metus enim
-      </Body>
+      <Body>Depending on the order, we can deliver to your farm.</Body>
     ),
   },
 ];
@@ -195,18 +196,18 @@ export default function Home() {
             <Grid id="videos">
               <Video
                 className="max-w-[386px]"
-                title="Chicks Drinking From Drinkers"
+                title="Bucket Drinker"
                 src="/product_videos/vid_of_drinker.mp4"
               />
 
               <Video
                 className="max-w-[386px]"
-                title="Chickens Drinking"
+                title="Chicks Drinking"
                 src="/product_videos/chicks_drinking_water.mp4"
               />
               <Video
                 className="max-w-[386px]"
-                title="Video Title"
+                title="Chickens Drinking"
                 src="/product_videos/mid_chickens_drinking.mp4"
               />
             </Grid>

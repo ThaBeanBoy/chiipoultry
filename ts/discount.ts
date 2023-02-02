@@ -15,7 +15,7 @@ let milliConversion: period = {
   seconds: 1000,
 };
 
-const discountEndDate: Date = new Date(2023, 0, 31, 23, 59);
+const discountEndDate: Date = new Date(2023, 1, 14, 23, 59);
 
 function discountPeriod(): period {
   const now: Date = new Date();

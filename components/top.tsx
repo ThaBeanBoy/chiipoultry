@@ -19,6 +19,8 @@ type NavProps = {
   routerPath: string;
   className?: string;
   navClick?: Function;
+
+  subNavs?: NavProps[];
 };
 
 const navs: nav[] = [
@@ -124,7 +126,7 @@ export default function Top() {
 
             <div
               id="container"
-              className="flex w-full flex-col items-center gap-8 rounded bg-white p-16"
+              className="flex w-full flex-col items-center gap-8 rounded bg-white p-16 text-center"
             >
               <Image
                 src="/after_sales_icons/repairs.svg"
@@ -134,10 +136,19 @@ export default function Top() {
               />
               <H3>Under Construction</H3>
               <hr className="w-full" />
-              <Body className="text-center">
-                <b>Chiipoultry online store is still under construction. </b>
+              <Body>
+                <span className="font-semibold">
+                  Chiipoultry online store is still under construction.{" "}
+                </span>
                 The store will be launched soon & users/customers will be
                 notified then.
+                <br />
+              </Body>
+              <Body className="font-semibold">
+                You can contact us{" "}
+                <Link className="text-attention" href="/contact-us">
+                  Here
+                </Link>
               </Body>
             </div>
           </div>

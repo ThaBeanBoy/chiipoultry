@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 import { useState, useEffect } from "react";
 
@@ -31,9 +32,15 @@ export default function DiscountSection() {
         </H2>
 
         <Body className="mb-48 max-w-[584px] text-center">
-          Lorem ipsum dolor sit amet consectetur. Tincidunt magna auctor rutrum
-          egestas mattis convallis aliquam erat consectetur. Scelerisque ac
-          adipiscing amet mauris bibendum.
+          We&apos;re currently running a 10% discount until 14 February. If you
+          are quick, you could get a new drinker system for a better deal.{" "}
+          <b>
+            You can get in contact with us{" "}
+            <Link className="text-attention" href="/contact-us">
+              here
+            </Link>
+            .
+          </b>{" "}
         </Body>
 
         <div id="countdown-timer" className="mb-32 flex justify-center gap-8">
