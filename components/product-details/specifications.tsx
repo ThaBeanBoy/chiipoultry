@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import { useState } from "react";
 
-import { MdKeyboardArrowDown } from "react-icons/Md";
+import { MdKeyboardArrowDown } from "react-icons/md";
 
 import { H3, H4, Body } from "../typography";
 

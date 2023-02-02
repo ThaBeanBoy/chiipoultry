@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 
 import { useState } from "react";
 
-import { IoMdClose } from "react-icons/Io";
+import { IoMdClose } from "react-icons/io";
 
 import Button from "./button";
 import { H3, Body } from "./typography";
