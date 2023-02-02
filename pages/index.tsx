@@ -11,7 +11,11 @@ const Grid = dynamic(() => import("../components/grid"), {
   ssr: false,
 });
 
-import DiscountSection from "@/components/discount";
+const DiscountSection = dynamic(import("../components/discount"), {
+  ssr: false,
+});
+
+// import DiscountSection from "@/components/discount";
 
 import ImageSlider from "../components/product-details/imageSlider";
 import Specifications from "../components/product-details/specifications";
@@ -227,7 +231,7 @@ export default function Home() {
                 ({ imagePath, imageAlt, title, description }, key) => (
                   <div
                     key={key}
-                    className="flex max-w-[384px] flex-col items-center gap-16 rounded bg-white p-16 drop-shadow-lg"
+                    className="flex max-w-[384px] flex-col items-center gap-16 rounded bg-white p-16 text-center drop-shadow-lg"
                   >
                     <Image
                       src={imagePath}
@@ -236,14 +240,14 @@ export default function Home() {
                       height={64}
                     />
                     <H4>{title}</H4>
-                    <Body className="text-center">{description}</Body>
+                    {description}
                   </div>
                 )
               )}
             </Grid>
           </div>
         </section>
-
+        {/* 
         <section id="testimonials" className="py-64">
           <div
             id="section-container"
@@ -265,13 +269,13 @@ export default function Home() {
                   key
                 ) => (
                   <div
-                    /* Testimonial Card */ key={key}
+                    /* Testimonial Card key={key}
                     className="flex max-w-[384px] flex-col gap-16 rounded bg-white p-16 drop-shadow-lg"
                   >
                     <Body>{testimonee}</Body>
                     <hr />
                     <div
-                      /* Bottom of testimonial card */ className="flex gap-8"
+                      /* Bottom of testimonial card className="flex gap-8"
                     >
                       <Image
                         src={CustomerImagePath}
@@ -280,7 +284,7 @@ export default function Home() {
                         width={48}
                         height={48}
                       />
-                      <div /*User Details */>
+                      <div /*User Details>
                         <Body>
                           <b>{title}</b>
                         </Body>
@@ -292,7 +296,7 @@ export default function Home() {
               )}
             </Grid>
           </div>
-        </section>
+        </section> */}
       </>
     </>
   );

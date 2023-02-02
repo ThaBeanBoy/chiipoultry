@@ -2,18 +2,19 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
-import { useState, useEffect } from "react";
-
 import { H2, H3, Body } from "./typography";
 import Button from "./button";
 
 import useDiscountPeriod from "../ts/discount";
 
+import { useEffect } from "react";
+
 export default function DiscountSection() {
-  const timeLeft = useDiscountPeriod();
+  const { days, hours, minutes, seconds, ended } = useDiscountPeriod();
+
   const router = useRouter();
 
-  return !timeLeft.ended ? (
+  return !ended ? (
     <section className="w-full bg-black">
       <div
         id="section-container"
@@ -44,20 +45,18 @@ export default function DiscountSection() {
         </Body>
 
         <div id="countdown-timer" className="mb-32 flex justify-center gap-8">
+          <H2 className="rounded bg-white p-8 text-black">{days} days</H2>
           <H2 className="rounded bg-white p-8 text-black">
-            {timeLeft.days} days
+            {hours < 10 ? "0" : ""}
+            {hours}
           </H2>
           <H2 className="rounded bg-white p-8 text-black">
-            {timeLeft.hours < 10 ? "0" : ""}
-            {timeLeft.hours}
+            {minutes < 10 ? "0" : ""}
+            {minutes}
           </H2>
           <H2 className="rounded bg-white p-8 text-black">
-            {timeLeft.minutes < 10 ? "0" : ""}
-            {timeLeft.minutes}
-          </H2>
-          <H2 className="rounded bg-white p-8 text-black">
-            {timeLeft.seconds < 10 ? "0" : ""}
-            {timeLeft.seconds}
+            {seconds < 10 ? "0" : ""}
+            {seconds}
           </H2>
         </div>
 

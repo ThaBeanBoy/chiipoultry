@@ -41,7 +41,12 @@ function discountPeriod(): period {
 }
 
 export default function useDiscountPeriod(): period {
-  const [discount, setDiscount] = useState(discountPeriod());
+  const [discount, setDiscount] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
 
   useEffect(() => {
     setInterval(() => setDiscount(discountPeriod()), 1000);

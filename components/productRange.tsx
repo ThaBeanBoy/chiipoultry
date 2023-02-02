@@ -89,7 +89,7 @@ function ProductTag({
         </H4>
       </div>
       <hr />
-      <Body>{description}</Body>
+      {description}
     </div>
   );
 }

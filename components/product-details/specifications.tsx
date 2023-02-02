@@ -48,7 +48,7 @@ function Detail({
           {title}
         </H4>
       </div>
-      {open ? <Body className="pl-24 text-left">{description}</Body> : <></>}
+      {open ? description : <></>}
     </button>
   );
 }
